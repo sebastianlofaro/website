@@ -20,6 +20,10 @@ video {
   border-radius: 10px;
   background: rgba(0 , 0, 0, 0.8);
   text-align: center;
+  h3 {
+    color: white;
+    font-size: 1.5rem;
+  }
   button {
     position: relative;
     top: 30%;
@@ -34,7 +38,11 @@ video {
     color: white;
   }
   #vip-pass {
-    background: #FFCF8D;
+    background: gold;
     color: black;
+  }
+  #vip-pass:hover, #w-pass:hover {
+    background: green;
+    color: white;
   }
 }
