@@ -8,3 +8,42 @@ video {
   position: fixed;
   z-index: -1000;
 }
+
+.cta {
+  float: right;
+  z-index: 100;
+  position: fixed;
+  top: 30%;
+  right: 10vw;
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  background: rgba(0 , 0, 0, 0.8);
+  text-align: center;
+  h3 {
+    color: white;
+    font-size: 1.3rem;
+    border-bottom: 3px solid #ff5400;
+  }
+  button {
+    position: relative;
+    top: 30%;
+    font-size: 2em;
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #w-pass {
+    background: #FF5400;
+    color: white;
+  }
+  #vip-pass {
+    background: gold;
+    color: black;
+  }
+  #vip-pass:hover, #w-pass:hover {
+    background: green;
+    color: white;
+  }
+}
