@@ -1,0 +1,19 @@
+header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background: rgba(0 , 0, 0, 0.8);
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+      }
+    }
+  }
+}

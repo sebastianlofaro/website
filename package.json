@@ -1,0 +1,16 @@
+{
+  "name": "music-festival",
+  "version": "1.0.0",
+  "description": "Website for the League City Music Festival and BBQ Cook Off",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Lofaro",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.8.1"
+  }
+}
