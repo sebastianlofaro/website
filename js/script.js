@@ -1,3 +1,4 @@
+
 var $video  = $('video'),
     $window = $(window);
 
