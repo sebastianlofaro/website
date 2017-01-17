@@ -1,0 +1,101 @@
+// About Page
+
+
+.about-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .lions-logo {
+    z-index: -1000;
+    display: block;
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    top: 27vh;
+    @include desktop {
+      width: 40%;
+    }
+  }
+  .about-title {
+    text-align: center;
+    position: absolute;
+    top: 10vh;
+    font-size: 4em;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-content {
+    background: rgba(255,255,255,0.9);
+    padding-top: 30vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
+    .subtitle {
+      text-align: center;
+      h2 {
+        display: inline;
+      }
+      .orange {
+        color: #FF5400;
+      }
+    }
+    .began {
+      width: 90%;
+      margin: 0 auto;
+      @include desktop {
+        width: 30%;
+      }
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+      p {
+        font-size: 1.4em;
+        text-align: justify;
+      }
+    }
+    .formed {
+      width: 90%;
+      margin: 0 auto;
+      @include desktop {
+        width: 30%;
+      }
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+      p {
+        font-size: 1.4em;
+        text-align: justify;
+      }
+    }
+    .serve {
+      width: 90%;
+      margin: 0 auto;
+      @include desktop {
+        width: 30%;
+      }
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+      p {
+        font-size: 1.4em;
+        text-align: justify;
+      }
+      ul {
+        li {
+          font-size: 1.4em;
+        }
+      }
+    }
+  }
+}

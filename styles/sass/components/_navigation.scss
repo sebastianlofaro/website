@@ -1,15 +1,30 @@
+.slicknav_menu {
+  padding: 0;
+  background: black;
+  z-index: 4000;
+  top: 0;
+  right: 0;
+  position: fixed;
+}
 header {
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: rgba(0 , 0, 0, 0.8);
+  background: rgba(0 , 0, 0, 1);
+  top: 0;
+  @include desktop {
+    background: rgba(0 , 0, 0, 0.8);
+  }
   .logo {
     width: 50px;
     float: left;
   }
   ul {
-    display: flex;
-    justify-content: space-around;
+    display: none;
+    @include desktop{
+      display: flex;
+      justify-content: space-around;
+    }
     li {
       list-style: none;
       text-decoration: none;
