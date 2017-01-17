@@ -6,6 +6,61 @@
   color: #ff5400;
 }
 
+#last-call {
+  z-index: 50000;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  .container {
+    background: white;
+    position: relative;
+    .close {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+    }
+    .buy {
+      border: none;
+      padding: 10px;
+      background: #ff5400;
+      color: white;
+      border-radius: 10px;
+    }
+    .buy:hover {
+      background: green;
+    }
+  }
+  .animate {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(4px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-8px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(8px, 0, 0);
+    }
+  }
+}
+
 video {
   display: none;
   @include desktop {

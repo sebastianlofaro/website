@@ -1,6 +1,6 @@
 
 var $video  = $('video'),
-    lastMouseLocation = 10;
+    firstTimeNotice = true;
     $window = $(window);
 
 function resizeVideo() {
@@ -30,7 +30,7 @@ $(window).resize(function(){
 
 
 
-
+//Slick Nav hamburger menu
 $(function() {
   $('#menu').slicknav();
 });
@@ -38,22 +38,16 @@ $(function() {
 
 
 
-
-
-$(document).mousemove(function(event) {
-  // console.log(event.pageX + ", " + event.pageY);
-  if (event.pageY < lastMouseLocation+1) {
-    // Mouse is moving up
-    console.log("moving up");
-    lastMouseLocation = event.pageY;
-    if (event.pageY <= 10) {
-      // alert("BUY TICKETS!!!");
-      console.log("BUY TICKETS");
-    }
+//Pop up
+$(document).mouseleave(function() {
+  console.log('The mouse has left the room!');
+  if (firstTimeNotice) {
+    firstTimeNotice = false;
+    $('#last-call').css('display', 'block');
+    $('#notice').addClass('animate');
   }
-  else if(event.pageY > lastMouseLocation+1) {
-    lastMouseLocation = event.pageY;
-    console.log("moving down")
-  }
+});
 
+$('#last-call').on('click', function() {
+  $('#last-call').css('display', 'none');
 });
