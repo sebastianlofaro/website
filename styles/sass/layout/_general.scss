@@ -19,8 +19,9 @@ video {
 
   text-align: center;
   position: fixed;
+  margin-top: 50px;
   @include desktop {
-    margin-top: 50px;
+
     display: none;
   }
   img {
@@ -80,12 +81,15 @@ video {
   }
   h3 {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border-bottom: 3px solid #ff5400;
+    @include desktop {
+      font-size: 1.3rem;
+    }
   }
   button {
     position: relative;
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 20px;
     margin-top: 0;
     border: none;

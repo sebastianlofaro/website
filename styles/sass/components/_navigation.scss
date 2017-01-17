@@ -5,6 +5,10 @@
   top: 0;
   right: 0;
   position: fixed;
+  display: inline-block;
+  @include desktop {
+    display: none;
+  }
 }
 header {
   z-index: 100;
