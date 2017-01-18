@@ -48,6 +48,10 @@ $(document).mouseleave(function() {
   }
 });
 
-$('#last-call').on('click', function() {
+$('.blackout').on('click', function() {
+  $('#last-call').css('display', 'none');
+});
+
+$('.close').on('click', function() {
   $('#last-call').css('display', 'none');
 });

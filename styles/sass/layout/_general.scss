@@ -11,11 +11,18 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.8);
+  // background: rgba(0,0,0,0.8);
   display: none;
+  .blackout {
+    background: rgba(0,0,0,0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  }
   .container {
     background: white;
     position: relative;
+    font-size: 1.5em;
     .close {
       background: none;
       border: none;
@@ -23,6 +30,10 @@
       top: 0;
       right: 0;
       padding: 10px;
+      font-size: 1rem;
+    }
+    h2 {
+      margin: 0;
     }
     .buy {
       border: none;
