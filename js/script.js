@@ -16,7 +16,6 @@ function resizeVideo() {
       'marginLeft' : marginAdjust,
       'marginRight' : marginAdjust
   });
-  console.log("hello1");
 }
 
 $(document).ready(function() {
@@ -40,7 +39,6 @@ $(function() {
 
 //Pop up
 $(document).mouseleave(function() {
-  console.log('The mouse has left the room!');
   if (firstTimeNotice) {
     firstTimeNotice = false;
     $('#last-call').css('display', 'block');
