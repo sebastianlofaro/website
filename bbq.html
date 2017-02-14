@@ -4,54 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>League City Music Festival</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="styles/css/slicknav.min.css">
   <link rel="stylesheet" href="styles/css/style.css">
-  <title>League City Music Festival</title>
 </head>
 <body class="black">
   <header>
     <a href="index.html"><img class="logo" src="media/img/Logo-small.jpg" alt=""></a>
     <ul id="menu">
+      <!-- <li><a href="index.html">HOME</a></li> -->
       <li><a href="index.html">HOME</a></li>
       <li><a href="artists.html">ARTISTS</a></li>
       <li><a href="http://pxtpcxtkqd.formstack.com/forms/2017_vendor_registration">VENDOR REGISTRATION</a></li>
-      <li><a href="bbq.html">BBQ</a></li>
+      <li><a class="selected" href="bbq.html">BBQ</a></li>
       <li><a href="http://pxtpcxtkqd.formstack.com/forms/2017_sponsor_from_lcmusicfest">SPONSORS</a></li>
-      <li><a class="selected" href="events.html">EVENTS</a></li>
+      <li><a href="events.html">EVENTS</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="mailto:info@lcmusicfest.com">CONTACT</a></li>
     </ul>
   </header>
-  <video autoplay loop poster="media/img/event.jpg">
-    <source src="media/video/events.mp4" type="video/mp4">
-  </video>
-  <div class="background-image">
-    <img src="media/img/backstage.jpg" alt="">
+  <div class="background">
+    <img id="background1" src="media/img/logo_background.jpg" alt="">
+    <img id="background2" src="media/img/BBQLogo.png" alt="">
   </div>
-  <!-- <div class="wrapper"> -->
-    <div class="container">
-      <h1>Event Schedule</h1>
-      <div class="days">
-        <div class="friday">
-          <h2>Friday</h2>
-          <ul>
-            <li>Free Admission (3pm-5pm)</li>
-            <li>Concert (time TBD)</li>
+
+  <div class="bbq-wrapper">
+    <div class="content">
+      <div class="title">
+        <h1>IBCA Sanctioned Cook-Off</h1>
+      </div>
+      <div class="score-wrapper">
+        <div class="scoring">
+          <h2>Categories</h2>
+          <ul class="score-breakdown">
+            <li>Brisket</li>
+            <li>Chicken</li>
+            <li>Ribs</li>
+            <li>Chili</li>
+            <li>Beef Fajita</li>
+            <li>Chicken Fajita</li>
           </ul>
         </div>
-        <div class="saturday">
-          <h2>Saturday</h2>
-          <ul>
-            <li>Park Opens to the Public (9am)</li>
-            <li>BBQ Competition Judging</li>
-            <li>Concert (time TBD)</li>
+        <div class="top-prizes">
+          <h2>Prizes</h2>
+          <ul class="top-prizes">
+            <li>1st - $750</li>
+            <li>2nd - $550</li>
+            <li>3rd - $350</li>
+            <li>4th - $250</li>
+            <li>5th - $200</li>
+            <li>6th - $150</li>
+            <li>7th - $100</li>
+            <li>8th - $50</li>
+            <li>9th - $50</li>
+            <li>10th - $50</li>
+            <br>
+            <li>Beef Fajita - 60% of Jackpot</li>
+            <li>Chicken Fajita - 60% of Jackpot</li>
+            <li>Best of Show - 60% of Jackpot</li>
+            <li></li>
           </ul>
         </div>
       </div>
-    </div>
-  <!-- </div> -->
+      <div class="rules-wrapper">
+        <a href="documents/LCMF_Rules.pdf">League City Music Festival &amp; BBQ Cook-Off Rules</a>
+        <br>
+        <a href="documents/IBCA_Rules.pdf">IBCA Rules</a>
+      </div>
+      <div class="sign-up">
+        <a href="http://pxtpcxtkqd.formstack.com/forms/2017_bbq_cookoff_registration"><button type="button" name="sign-up">Sign Up</button></a>
+      </div>
+     </div> <!-- content end -->
+  </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.slicknav.min.js"></script>

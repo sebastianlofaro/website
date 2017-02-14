@@ -1,0 +1,95 @@
+.background {
+  position: relative;
+  #background1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  #background2 {
+    position: relative;
+    display: block;
+    width: 50%;
+    //z-index: -100;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+.bbq-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  .content {
+    text-align: center;
+    color: #F6EFD7;
+    font-size: 1.5em;
+    width: 95%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    @include desktop {
+      width: 75%;
+    }
+    .title {
+      width: 100%;
+      border-bottom: 3px solid #ff5400;
+      h1 {
+        padding: 10px;
+        margin: 0;
+      }
+    }
+    .score-wrapper {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      @include desktop {
+        flex-direction: row;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          list-style: none;
+        }
+      }
+    }
+    .rules-wrapper {
+      padding: 50px;
+      a {
+        color: #F6EFD7;
+      }
+      a:hover {
+        cursor: pointer;
+      }
+    }
+    .sign-up {
+      button {
+        border: none;
+        color: white;
+        background-color: #FF5400;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1.3em;
+      }
+      button:hover {
+        background-color: green;
+      }
+    }
+  }
+}

@@ -2,29 +2,27 @@
 var $video  = $('video'),
     firstTimeNotice = true;
     $window = $(window);
-
-function resizeVideo() {
-  var height = $window.height();
-  $video.css('height', height);
-
-  var videoWidth = $video.width(),
-      windowWidth = $window.width(),
-      marginAdjust =   (windowWidth - videoWidth) / 2;
-
-  $video.css({
-      'height': height,
-      'marginLeft' : marginAdjust,
-      'marginRight' : marginAdjust
-  });
-}
-
-$(document).ready(function() {
-  resizeVideo();
-});
-
-$(window).resize(function(){
-    resizeVideo();
-});
+//
+// function resizeVideo() {
+//   var height = $window.height();
+//   $video.css('height', height);
+//
+//   var videoWidth = $video.width(),
+//       windowWidth = $window.width(),
+//       marginAdjust =   (windowWidth - videoWidth) / 2;
+//
+//   $video.css({
+//       'height': height,
+//       'marginLeft' : marginAdjust,
+//       'marginRight' : marginAdjust
+//   });
+// }
+//
+//
+//
+// $(window).resize(function(){
+//     resizeVideo();
+// });
 
 
 

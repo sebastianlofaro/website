@@ -75,9 +75,20 @@
 video {
   display: none;
   @include desktop {
+    // display: block;
+    // position: fixed;
+    // z-index: -1000;];
     display: block;
     position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
   }
 }
 
@@ -177,5 +188,16 @@ video {
   #vip-pass:hover, #w-pass:hover {
     background: green;
     color: white;
+  }
+}
+
+.sponsors {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  img {
+    display: inline-block;
+    width: 15%;
   }
 }
