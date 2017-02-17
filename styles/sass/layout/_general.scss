@@ -111,29 +111,25 @@ video {
   width: 100%;
   text-align: center;
   color: white;
-  text-shadow: 2px 1px 3px black;
-  top: 15vh;
-  background: rgba(0 , 0, 0, 0.6);
+  //text-shadow: 1px 1px 2px rgba(246, 240, 215, .3);
+  top: 5vh;
+
   @include desktop {
     position: absolute;
-    margin-top: 20vh;
+    margin-top: 5vh;
     background: none;
     top: auto;
   }
-  .title {
-    position: relative;
-    font-size: 200%;
-    margin-bottom: 10px;
-    @include desktop {
-      font-size: 500%;
-    }
+  @include desktopShort {
+    margin-top: 10vh;
   }
-  .subtitle {
-    font-size: 100%;
-    margin: 0;
-    margin-bottom: 21px;
+  .logo {
+    width: 60%;
     @include desktop {
-      font-size: 200%;
+      width: 40%;
+    }
+    @include desktopShort {
+      width: 30%;
     }
   }
 }
@@ -148,7 +144,7 @@ video {
   background: rgba(0 , 0, 0, 1);
   text-align: center;
   @include desktop {
-    top: 55%;
+    top: 65%;
     float: right;
     right: 10vw;
     width: 500px;
@@ -156,13 +152,27 @@ video {
     border-radius: 10px;
     height: 200px;
   }
+  @include desktopShort {
+    top: 60%;
+    width: 400px;
+    height: 165px;
+  }
+  h2 {
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #ff5400;
+    margin-top: 5px;
+    @include desktop {
+      font-size: 2em;
+    }
+    @include desktopShort {
+      font-size: 1.6em;
+    }
+  }
   h3 {
     color: white;
     font-size: 1.2rem;
-    border-bottom: 3px solid #ff5400;
-    @include desktop {
-      font-size: 1.3rem;
-    }
+    margin: 0 0 5px 0;
   }
   button {
     position: relative;
@@ -175,6 +185,9 @@ video {
     @include desktop {
       font-size: 2em;
       top: 30%;
+    }
+    @include desktopShort {
+      font-size: 1.5em;
     }
   }
   #w-pass {
@@ -196,8 +209,27 @@ video {
   bottom: 0;
   position: fixed;
   text-align: center;
+  margin-bottom: 145px;
+  @include desktop {
+    margin: 0;
+  }
   img {
     display: inline-block;
-    width: 15%;
+    width: 25%;
+    @include desktop {
+      width: 15%;
+    }
+    @include desktopShort {
+      width: 10%
+    }
+  }
+  #lions-logo {
+    width: 14%;
+    @include desktop {
+      width: 9.5%;
+    }
+    @include desktopShort {
+      width: 6.5%;
+    }
   }
 }

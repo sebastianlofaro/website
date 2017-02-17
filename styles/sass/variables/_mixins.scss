@@ -2,4 +2,11 @@
     @media (min-width: 960px) {
         @content;
     }
+
+}
+
+@mixin desktopShort() {
+    @media (max-height: 960px) and (min-width: 960px) {
+        @content;
+    }
 }
