@@ -224,7 +224,14 @@ video {
     }
   }
   #faust-logo {
-    margin-top: 20px
+    margin-top: 20px;
+    width: 20%;
+    @include desktop {
+      width: 13.5%;
+    }
+    @include desktopShort {
+      width: 8.5%;
+    }
   }
   #lions-logo {
     width: 13%;
