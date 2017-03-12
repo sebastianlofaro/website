@@ -31,7 +31,7 @@
   width: 100%;
   .content {
     text-align: center;
-    color: #F6EFD7;
+    color: $c-text-medium;
     font-size: 1.5em;
     width: 95%;
     max-width: 800px;
@@ -40,7 +40,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.8);
+    background: $c-content-background-dark;
     padding-bottom: 20px;
     margin-bottom: 100px;
     @include desktop {
@@ -48,7 +48,7 @@
     }
     .title {
       width: 100%;
-      border-bottom: 3px solid #ff5400;
+      border-bottom: 3px solid $c-primary-underline;
       h1 {
         padding: 10px;
         margin: 0;
@@ -72,7 +72,7 @@
     .rules-wrapper {
       padding: 50px;
       a {
-        color: #F6EFD7;
+        color: $c-text-medium;
       }
       a:hover {
         cursor: pointer;
@@ -81,14 +81,14 @@
     .sign-up {
       button {
         border: none;
-        color: white;
-        background-color: #FF5400;
+        color: $c-text-light;
+        background-color: $c-button-primary-background;
         padding: 10px;
         border-radius: 10px;
         font-size: 1.3em;
       }
       button:hover {
-        background-color: green;
+        background-color: $c-button-background-hover;
       }
     }
   }
@@ -97,20 +97,29 @@
     width: 100%;
     display: block;
     position: relative;
-    background: #F6F0D8;
-    border-top: 1px solid black;
+    background: $c-content-background-medium;
+    border-top: 1px solid $c-content-background-dark-opaque;
     padding-bottom: 10px;
     margin: 0;
     h3 {
       font-size: 3em;
       margin: 15px 0;
-      border-bottom: 3px solid #ff5400;
+      border-bottom: 3px solid $c-primary-underline;
     }
     ul {
       text-align: center;
       padding: 0;
       list-style: none;
       margin: 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 20%;
+      height: 15vw;
+      li {
+        img {
+          width: 50%;
+        }
+      }
     }
   }
 }

@@ -1,19 +1,24 @@
 // Events Page
 
 
-.container {
+.events-container {
   text-align: center;
   position: absolute;
   top: 20vh;
   left: 0;
   right: 0;
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
-  padding: 50px;
-  background: rgba(255,255,255,.8);
+  //padding: 50px;
+  background: $c-content-background-light;
   border-radius: 10px;
+  @include desktop {
+    width: 50%;
+  }
   h1 {
     margin: 0;
+    padding: 10px 0;
+    border-bottom: 3px solid $c-primary-underline;
   }
   .days {
     display: flex;
@@ -27,6 +32,37 @@
       padding: 0;
       li {
         list-style: none;
+      }
+    }
+  }
+  .thankyou {
+    background-color: rgba(0,0,0,0.1);
+    h2 {
+      padding: 10px 0;
+      margin: 0;
+      font-size: 2em;
+      border-bottom: 3px solid $c-primary-underline;
+    }
+    p {
+      margin: 5px 0 50px 0;
+    }
+    ul {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      justify-content: space-around;
+      margin: 0;
+      padding: 50px 50px 0 50px;
+      li {
+        list-style: none;
+        img {
+          width: 150px;
+          @include desktop {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
       }
     }
   }

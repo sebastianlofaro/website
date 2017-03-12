@@ -1,0 +1,26 @@
+// Colors by Name
+$international-orange: #ff5400;
+$green: green;
+$gold: gold;
+$white: white;
+$black: black;
+$janna: #F6F0D8;
+$black-transparent: rgba(0,0,0,0.8);
+$white-transparent: rgba(255,255,255,.8);
+
+
+// Colors by Use
+$c-primary-underline: $international-orange;
+$c-primary-menu-background: $black-transparent;
+$c-button-background-hover: $green;
+$c-button-primary-background: $international-orange;
+$c-button-special-background: $gold;
+$c-text-light: $white;
+$c-text-medium: $janna;
+$c-text-dark: $black;
+$c-content-background-light: $white-transparent;
+$c-content-background-light-opaque: $white;
+$c-content-background-medium: $janna;
+$c-content-background-dark: $black-transparent;
+$c-content-background-dark-opaque: $black;
+$c-page-selected: $international-orange;

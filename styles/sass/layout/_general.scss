@@ -3,7 +3,7 @@
 }
 
 .selected {
-  color: #ff5400;
+  color: $c-page-selected;
 }
 
 #last-call {
@@ -11,18 +11,25 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  // background: rgba(0,0,0,0.8);
   display: none;
+  text-align: center;
   .blackout {
-    background: rgba(0,0,0,0.8);
+    background: $c-content-background-dark;
     width: 100vw;
     height: 100vh;
     position: absolute;
   }
   .container {
-    background: white;
     position: relative;
     font-size: 1.5em;
+    background: $c-content-background-light-opaque;
+    width: 50%;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 10px;
     .close {
       background: none;
       border: none;
@@ -38,12 +45,12 @@
     .buy {
       border: none;
       padding: 10px;
-      background: #ff5400;
-      color: white;
+      background: $c-button-primary-background;
+      color: $c-text-light;
       border-radius: 10px;
     }
     .buy:hover {
-      background: green;
+      background: $c-button-background-hover;
     }
   }
   .animate {
@@ -110,8 +117,7 @@ video {
   position: fixed;
   width: 100%;
   text-align: center;
-  color: white;
-  //text-shadow: 1px 1px 2px rgba(246, 240, 215, .3);
+  color: $c-text-light;
   top: 5vh;
 
   @include desktop {
@@ -141,14 +147,14 @@ video {
   bottom: 0;
   width: 100%;
 
-  background: rgba(0 , 0, 0, 1);
+  background: $c-content-background-dark-opaque;
   text-align: center;
   @include desktop {
     top: 65%;
     float: right;
     right: 10vw;
     width: 500px;
-    background: rgba(0 , 0, 0, 0.7);
+    background: $c-content-background-dark;
     border-radius: 10px;
     height: 200px;
   }
@@ -158,9 +164,9 @@ video {
     height: 165px;
   }
   h2 {
-    color: white;
+    color: $c-text-light;
     font-size: 1.5rem;
-    border-bottom: 3px solid #ff5400;
+    border-bottom: 3px solid $c-primary-underline;
     margin-top: 5px;
     @include desktop {
       font-size: 2em;
@@ -170,7 +176,7 @@ video {
     }
   }
   h3 {
-    color: white;
+    color: $c-text-light;
     font-size: 1.2rem;
     margin: 0 0 5px 0;
   }
@@ -191,16 +197,16 @@ video {
     }
   }
   #w-pass {
-    background: #FF5400;
-    color: white;
+    background: $c-button-primary-background;
+    color: $c-text-light;
   }
   #vip-pass {
-    background: gold;
-    color: black;
+    background: $c-button-special-background;
+    color: $c-text-dark;
   }
   #vip-pass:hover, #w-pass:hover {
-    background: green;
-    color: white;
+    background: $c-button-background-hover;
+    color: $c-text-light;
   }
 }
 
