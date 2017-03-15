@@ -1,33 +1,11 @@
 
 var $video  = $('video'),
-    firstTimeNotice = true;
-    $window = $(window);
-//
-// function resizeVideo() {
-//   var height = $window.height();
-//   $video.css('height', height);
-//
-//   var videoWidth = $video.width(),
-//       windowWidth = $window.width(),
-//       marginAdjust =   (windowWidth - videoWidth) / 2;
-//
-//   $video.css({
-//       'height': height,
-//       'marginLeft' : marginAdjust,
-//       'marginRight' : marginAdjust
-//   });
-// }
-//
-//
-//
-// $(window).resize(function(){
-//     resizeVideo();
-// });
+    firstTimeNotice = true,
+    $window = $(window),
+    $countdown = $("#countdown"),
+    countdownDate = new Date("May 5, 2017 15:00:00").getTime();
 
 
-
-
-//Slick Nav hamburger menu
 $(function() {
   $('#menu').slicknav();
 });
@@ -51,3 +29,15 @@ $('.blackout').on('click', function() {
 $('.close').on('click', function() {
   $('#last-call').css('display', 'none');
 });
+
+
+//Count down timer
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countdownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  $countdown.text(days + " : " + hours + " : " + minutes + " : " + seconds);
+}, 1000);
