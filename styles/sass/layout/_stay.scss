@@ -1,0 +1,48 @@
+.stay-wrapper {
+  text-align: center;
+}
+
+.hotel-container {
+  background: $c-content-background-medium;
+  width: 70%;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 50px;
+  h1 {
+    width: calc(100% + 20px);
+    margin: 5px;
+    margin-left: -10px;
+    border-bottom: 3px solid $c-primary-underline;
+    font-size: 3em;
+  }
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    .hotel {
+      list-style: none;
+      margin: 10px;
+      width: 30%;
+      img {
+        width: 90%;
+      }
+      .features {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20%;
+      }
+      button {
+        background: green;
+        border: none;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+      }
+    }
+  }
+}
