@@ -4,17 +4,30 @@
 
 .hotel-container {
   background: $c-content-background-medium;
-  width: 70%;
+  width: 90%;
   border-radius: 10px;
   padding: 10px;
   display: inline-block;
   margin-bottom: 50px;
+  @include desktop {
+    width: 70%;
+  }
   h1 {
     width: calc(100% + 20px);
     margin: 5px;
     margin-left: -10px;
     border-bottom: 3px solid $c-primary-underline;
-    font-size: 3em;
+    font-size: 2.5em;
+    @include desktop {
+      font-size: 3em;
+    }
+  }
+  h3 {
+    text-decoration: underline;
+    font-size: 1.5em;
+    @include desktop {
+      font-size: 2em;
+    }
   }
   ul {
     display: flex;
@@ -23,17 +36,27 @@
     align-items: baseline;
     margin: 0;
     padding: 0;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
     .hotel {
       list-style: none;
-      margin: 10px;
-      width: 30%;
+      margin: 10px auto;
+      width: 90%;
+      @include desktop {
+        width: 30%;
+      }
       img {
         width: 90%;
       }
       .features {
         display: flex;
         flex-direction: column;
-        padding-left: 20%;
+        padding: 0;
+        @include desktop {
+          padding-left: 20%;
+        }
       }
       button {
         background: green;

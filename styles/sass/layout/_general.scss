@@ -104,6 +104,8 @@ video {
   text-align: center;
   position: fixed;
   margin-top: 50px;
+  bottom: 0;
+  width: 200%;
   @include desktop {
 
     display: none;
@@ -119,7 +121,10 @@ video {
   text-align: center;
   color: $c-text-light;
   top: 5vh;
-
+  @include mobile-landscape {
+    text-align: left;
+    width: 125vh;
+  }
   @include desktop {
     position: absolute;
     margin-top: 5vh;
@@ -127,15 +132,32 @@ video {
     top: auto;
   }
   @include desktopShort {
-    margin-top: 10vh;
+    //margin-top: 10vh;
+    text-align: left;
+    padding-left: 3%;
+    top: 5vh;
+    margin: 0;
   }
   .logo {
     width: 60%;
+    @include mobile-landscape {
+      margin-top: 10px;
+    }
+
     @include desktop {
-      width: 40%;
+      width: 50vh;
+      max-width: 50%;
     }
     @include desktopShort {
-      width: 30%;
+      width: 70vh;
+      max-width: 50%;
+    }
+    @include desktopShortWide {
+      //width: 30%
+    }
+    @include desktopTallNarrow {
+      width: 60vh;
+      max-width: 50%;
     }
   }
 }
@@ -144,48 +166,63 @@ video {
 .cta {
   z-index: 100;
   position: fixed;
-  bottom: 0;
+  bottom: 15vw;
   width: 100%;
-
-  background: $c-content-background-dark-opaque;
+  background: transparent;
   text-align: center;
+  @include mobile-landscape {
+    width: 50%;
+    margin-left: 45%;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
   @include desktop {
-    top: 60%;
+    top: 50vh;
     float: right;
     right: 10vw;
     width: 500px;
     background: $c-content-background-dark;
     border-radius: 10px;
-    height: 210px;
+    height: 310px;
   }
   @include desktopShort {
-    top: 55%;
+    background: $c-content-background-dark-opaque;
+    top: 25%;
     width: 400px;
-    height: 185px;
+    height: 285px;
+    right: 10;
   }
   h2 {
-    color: $c-text-light;
+    color: $c-text-medium;
     font-size: 1.5rem;
-    border-bottom: 3px solid $c-primary-underline;
+    //border-bottom: 3px solid $c-primary-underline;
     margin-top: 5px;
     margin-bottom: 0;
     @include desktop {
       font-size: 2em;
-
+      color: $c-text-light;
     }
     @include desktopShort {
       font-size: 1.6em;
+      color: $c-text-light;
     }
   }
   #countdown {
-    //background-color: $c-primary-underline;
+    background-color: $c-content-background-medium;
     margin-top: 0;
     margin-bottom: 25px;
+    color: red;
+    @include mobile-landscape {
+      margin: 0;
+    }
   }
   h3 {
     color: $c-text-light;
     font-size: 1.2rem;
     margin: 0 0 5px 0;
+    @include desktop {
+      color: $c-text-light;
+    }
   }
   button {
     position: relative;
@@ -195,6 +232,15 @@ video {
     border: none;
     padding: 10px;
     border-radius: 10px;
+    width: 40%;
+    font-size: .8em;
+    margin: 5px;
+    @include mobile-landscape {
+      width: 40%;
+      font-size: .8em;
+      margin: 5px;
+      padding: 3 0;
+    }
     @include desktop {
       font-size: 2em;
       top: 30%;
@@ -202,6 +248,7 @@ video {
     @include desktopShort {
       font-size: 1.5em;
     }
+
   }
   #w-pass {
     background: $c-button-primary-background;
@@ -215,15 +262,57 @@ video {
     background: $c-button-background-hover;
     color: $c-text-light;
   }
+  .ticket-info {
+    color: $c-text-light;
+    @include desktop {
+      color: $c-text-light;
+    }
+    h3 {
+      margin: 0;
+    }
+    h4 {
+      margin: 0;
+    }
+    .days {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      h3 {
+        text-decoration: underline;
+      }
+      ul {
+        padding: 0;
+        margin: 5px;
+        li {
+          color: white;
+          list-style: none;
+        }
+      }
+    }
+  }
 }
 
 .sponsors {
+  padding: 5px;
   width: 100%;
-  bottom: 50px;
+  bottom: 0;
   position: fixed;
   text-align: center;
-  margin-bottom: 130px;
-  background-color: black;
+  margin-bottom: 0;
+  background-color: $c-content-background-medium;
+  z-index: 1000;
+  .desktop {
+    display: none;
+    @include desktop {
+      display: inline-block;
+    }
+  }
+  .mobile {
+    display: inline-block;
+    @include desktop {
+      display: none;
+    }
+  }
   @include desktop {
     background-color: transparent;
     margin: 0;
@@ -231,6 +320,9 @@ video {
   img {
     display: inline-block;
     width: 15%;
+    @include mobile-landscape {
+      width: 10%;
+    }
     @include desktop {
       width: 15%;
     }
@@ -248,8 +340,11 @@ video {
       width: 8.5%;
     }
   }
-  #acu-logo {
-    width: 23%;
+  .acu-logo {
+    width: 30%;
+    @include mobile-landscape {
+      width: 20%;
+    }
     @include desktop {
       width: 20%;
     }
@@ -257,8 +352,11 @@ video {
       width: 20%;
     }
   }
-  #lions-logo {
+  #whataburger-logo {
     width: 10%;
+    @include mobile-landscape {
+      width: 6%;
+    }
     @include desktop {
       width: 9.5%;
     }

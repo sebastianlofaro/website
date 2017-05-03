@@ -1,0 +1,45 @@
+
+
+.parade-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    .content {
+      box-sizing: border-box;
+        text-align: center;
+        color: $c-text-dark;
+        font-size: 1.5em;
+        width: 95%;
+        max-width: 800px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        background: $c-content-background-medium;
+        padding: 20px;
+        margin-bottom: 100px;
+        iframe {
+          width: 80%;
+        }
+        @include desktop {
+            width: 75%;
+            iframe {
+              width: 80%;
+              min-height: 350px;
+            }
+        }
+
+        .title {
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            border-bottom: 3px solid $c-primary-underline;
+
+            h1 {
+                padding: 10px;
+                margin: 0;
+            }
+        }
+    }
+}
