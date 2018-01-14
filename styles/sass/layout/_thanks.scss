@@ -1,0 +1,46 @@
+.thanks {
+  #background1 {
+    position: fixed;
+  }
+  #background2 {
+    width: 60vh;
+    margin-top: 0;
+    @include short {
+      width: 50vh;
+    }
+  }
+
+  text-align: center;
+  $ease: cubic-bezier(.47,.01,0,1.01);
+
+  .thank-you {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  span {
+    color: $c-text-medium;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate3d(calc(-50% - 6px),calc(-50% + 6px),0);
+    mix-blend-mode: screen;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 darken($c-text-medium, 70%), 0 0 darken($c-text-medium, 70%), 0 0 darken($c-text-medium, 70%), 0 0 darken($c-text-medium, 70%), 0 0 darken($c-text-medium, 70%);
+    opacity: 0;
+    animation: revolve 2s $ease forwards 0.5s;
+    @keyframes revolve {
+      to {
+        opacity: 1;
+        transform: translate3d(-50%,-50%,0);
+        text-shadow: -2px 1px darken($c-text-medium, 70%), -3px 2px darken($c-text-medium, 70%), -4px 3px darken($c-text-medium, 70%), -5px 4px darken($c-text-medium, 70%), -6px 5px darken($c-text-medium, 70%);
+      }
+    }
+  }
+}

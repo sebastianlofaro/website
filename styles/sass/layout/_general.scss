@@ -253,10 +253,12 @@ video {
   #w-pass {
     background: $c-button-primary-background;
     color: $c-text-light;
+    top: 0;
   }
   #vip-pass {
     background: $c-button-special-background;
     color: $c-text-dark;
+    top: 0;
   }
   #vip-pass:hover, #w-pass:hover {
     background: $c-button-background-hover;
@@ -365,3 +367,21 @@ video {
     }
   }
 }
+
+
+
+
+
+// NEW SHIT
+
+// .main-content::after {
+//   content: "";
+//   background: url("../../media/img/logo_background.jpg")
+//   opacity: 0.5;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   position: absolute;
+//   z-index: -1;
+// }

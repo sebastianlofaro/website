@@ -29,3 +29,10 @@
         @content;
     }
 }
+
+@mixin short() {
+    @media (max-height: 1000) {
+        @content;
+    }
+
+}
